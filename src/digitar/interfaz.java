@@ -137,6 +137,7 @@ int indice=0;
         jLabel2.setText("Sus números son:");
         jPanel3.add(jLabel2);
 
+        resultado.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         resultado.setText(".");
         jPanel3.add(resultado);
 
