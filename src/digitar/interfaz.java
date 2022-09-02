@@ -38,6 +38,8 @@ int indice=0;
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         resultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,10 +68,18 @@ int indice=0;
 
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
-        jButton1.setBackground(new java.awt.Color(19, 15, 64));
+        jButton1.setBackground(new java.awt.Color(186, 220, 88));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(153, 153, 153));
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("Agregar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -79,7 +89,16 @@ int indice=0;
 
         jButton2.setBackground(new java.awt.Color(246, 229, 141));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("Mostrar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -108,8 +127,16 @@ int indice=0;
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
+        jPanel3.setLayout(new java.awt.GridLayout(2, 1));
+
+        jLabel2.setFont(new java.awt.Font("Stencil", 2, 12)); // NOI18N
+        jLabel2.setText("Sus números son:");
+        jPanel3.add(jLabel2);
+
         resultado.setText(".");
-        getContentPane().add(resultado, java.awt.BorderLayout.CENTER);
+        jPanel3.add(resultado);
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -195,6 +222,30 @@ resultado.setText(" ");
         jButton3.setForeground(new java.awt.Color(51, 51, 51));
     }//GEN-LAST:event_jButton3MouseExited
 
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        // TODO add your handling code here:
+        jButton2.setBackground(new java.awt.Color(246, 229, 141));
+           jButton2.setForeground(new java.awt.Color(51, 51, 51));
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        // TODO add your handling code here:
+          jButton2.setForeground(new java.awt.Color(153, 153, 153));
+       jButton2.setBackground(new java.awt.Color(19, 15, 64));
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        // TODO add your handling code here:
+            jButton1.setForeground(new java.awt.Color(153, 153, 153));
+       jButton1.setBackground(new java.awt.Color(19, 15, 64));
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        // TODO add your handling code here:
+        jButton1.setBackground(new java.awt.Color(186, 220, 88));
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
+    }//GEN-LAST:event_jButton1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -235,8 +286,10 @@ resultado.setText(" ");
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField numero;
     private javax.swing.JLabel resultado;
     // End of variables declaration//GEN-END:variables
