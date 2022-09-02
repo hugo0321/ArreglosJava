@@ -41,8 +41,10 @@ int indice=0;
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         resultado = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setLayout(new java.awt.GridLayout(2, 1));
@@ -66,6 +68,7 @@ int indice=0;
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
+        jPanel2.setBackground(new java.awt.Color(223, 249, 251));
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton1.setBackground(new java.awt.Color(186, 220, 88));
@@ -127,6 +130,7 @@ int indice=0;
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
+        jPanel3.setBackground(new java.awt.Color(247, 241, 227));
         jPanel3.setLayout(new java.awt.GridLayout(2, 1));
 
         jLabel2.setFont(new java.awt.Font("Stencil", 2, 12)); // NOI18N
@@ -137,6 +141,9 @@ int indice=0;
         jPanel3.add(resultado);
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_START);
+
+        jPanel4.setBackground(new java.awt.Color(247, 241, 227));
+        getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -290,6 +297,7 @@ resultado.setText(" ");
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField numero;
     private javax.swing.JLabel resultado;
     // End of variables declaration//GEN-END:variables
